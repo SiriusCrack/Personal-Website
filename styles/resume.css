@@ -5,6 +5,9 @@ div.left {
   padding-right: 5%;
   width: 55%;
 }
+div.left #name {
+  padding: 0%;
+}
 div.right {
   width: 40%;
 }
