@@ -1,52 +1,96 @@
-div {
+body {
+  display: flex;
+  flex-wrap: wrap;
+  word-wrap: break-word;
   text-align: left;
+  max-width: 210mm;
+  width: 100%;
+  margin: auto;
+  margin-top: 2em;
+  font-family: 'Comfortaa';
+  font-size: 1em;
+}
+div {
+  box-sizing: border-box;
 }
 div.left {
   padding-right: 5%;
-  width: 55%;
-}
-div.left #name {
-  padding: 0%;
+  width: 60%;
 }
 div.right {
   width: 40%;
+  font-size: 0.9em;
 }
-div#info {
-  text-align: right;
+header div.right {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
-@media screen and (max-width: 800px) {
-  div {
-    width: 100% !important;
-    text-align: center !important;
-  }
-}
-body {
-  font-family: 'Comfortaa';
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  width: 210mm;
-  margin: 2em auto;
-}
 header {
   display: inherit;
+  flex-wrap: inherit;
   width: inherit;
   margin-bottom: 1em;
 }
-section {
-  padding: 1em 0 0 0;
-  line-height: 130%;
+article {
+  display: inherit;
+  flex-wrap: inherit;
+  width: inherit;
+}
+footer {
+  margin-top: 5em;
+}
+footer>p {
+  font-size: 0.75em;
+  color: #999999;
+}
+section#name {
+  padding: 0%;
+  font-family: 'Cormorant Garamond';
+}
+section#info>p {
+  text-align: right;
+  font-weight: bold;
+  color: black;
 }
 h1 {
-  font-family: 'Cormorant Garamond';
-  font-size: 3em;
   margin: 0;
+  font-size: 3.6em;
   font-weight: bold;
 }
 h2 {
+  margin: 2em 0;
+  font-size: 1em;
+  font-weight: bold;
+  color: #2079c7;
+}
+h3 {
+  margin: 1em 0 0.2em;
+  font-weight: bold;
+}
+h4 {
+  margin: 0.2em 0;
+  font-weight: normal;
+}
+#name h4 {
+  font-size: 1.2em;
+}
+#education h4 {
+  font-style: italic;
+}
+h5 {
+  margin: 1em 0;
+  font-size: 0.8em;
+  font-weight: normal;
+  color: #666666;
+}
+p {
+  margin: 0;
+  font-size: 0.95em;
+  line-height: 1.75em;
+  color: #666666;
+}
+/* h2 {
   font-size: 0.8em;
   margin: 0;
   font-weight: lighter;
@@ -85,4 +129,17 @@ ul {
 img {
   width: 90%;
   margin: 0 auto;
+} */
+
+@media screen and (max-width: 800px) {
+  div,
+  div.left,
+  div.right,
+  body,
+  p,
+  section#info>p {
+    width: 100%;
+    padding: 0%;
+    text-align: center;
+  }
 }
